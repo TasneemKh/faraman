@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="utf-8">
+    <title> فرمان </title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	   <style>
+body{direction:rtl;text-align:right;}
+.text-block2{position: absolute;
+    bottom:56%;
+    right: 20px;
+    background-color: white;
+    color: #37798F;
+    FONT-WEIGHT: 200;
+    padding: 18px;
+    border-radius: 50%;
+    font-size: small;
+    font-weight: bold;
+    text-align: center;
+}
+.con {
+  position: relative;
+}
+div.borderCard{
+border:0
+}
+@media (min-width: 768px){
+.co-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 45%;
+}}
+@media (min-width: 540px) && (max-width:700px){
+.cos-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+}
+.hyper{ display: block;
+    color: black;
+    font-weight: 500;
+    line-height: 1.2;}
+
+  </style>
+  </head>
+  <body>
+  <div class="container"style="   max-height: max-content;">
+<h1 class="text-center my-5" style="
+    color: #37798F;
+">blog المدونة</h1>
+  <div id="list"  style="
+    max-height: max-content;">
+
+
+	</div>
+	</div>
+  <nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+
+<script src="jquery.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+		<script>
+$.get('https://jsonplaceholder.typicode.com/todos', function(data) {
+let count=0;
+grand=$('<div class="d-flex justify-content-around" style="flex-wrap: wrap;">');
+
+				for ( let i=0 ;i<12;++i){
+              if (i%2==0 && i!=0){
+			  grand1=$('</div>');
+			    grand2= $('<div class="d-flex " style="">');
+			  }
+			 
+				father=$(' <div class="card borderCard co-6 cos-12 " style="">');
+				son1=$(' <div class="con">');
+				son1.prepend(' <img class="card-img-top" src="img/blogimg200.png" alt="Card image cap">');
+				
+				son2=$('  <div class="text-block2"> ');	
+				
+				a = $('<p>');
+				a.attr('data-id', data[i].id);
+				a.text('01 May');
+				a.addClass('card-title');
+				son2.append(a);
+				son1.append(son2);
+				div=$('<div class="card-body">');
+				div.addClass('text-center');
+				 p=$('<a href="#">');
+				p.addClass('card-text');
+				p.addClass('hyper');
+				p.text('Some quick example text to build on the card title and make up the bulk of the cards content');
+				div.append(p);
+				
+				father.append(son1);
+			father.append(div);
+				
+				grand.append(father);
+			 $('#list').append(grand);}});	
+			 
+	
+	
+  </script>
+</body>
+</html>

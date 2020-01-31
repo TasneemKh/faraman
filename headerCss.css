@@ -1,0 +1,63 @@
+body{    direction: rtl;
+    text-align: left;}
+	
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid #37798F;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+      border-right-width: 0px;
+      border-top-left-radius:12px;
+border-bottom-left-radius:12px;
+    height: 35px;    background-color: #37798F;
+}
+
+input#search::placeholder {
+    color: #e6e6e4;
+}
+
+.dropdown-menu.show{  right: 0px;
+    font-size: small;
+    text-align: right;}
+		 .navbar-light .navbar-nav .nav-link {
+    color: rgb(82, 64, 179);
+}
+@media only screen and (max-width: 1200px) and (min-width: 990px) {
+#c {
+    font-size: x-small !important;
+}
+
+}
+ .nav-link{font-weight: 900;} 	
+form.example button {
+  float: left;
+      height: 35px;
+  width: 20%;
+  padding: 0px;
+border-top-right-radius:12px;
+border-bottom-right-radius:12px;
+  color: white;
+  font-size: 17px;
+  border: 1px solid #37798F;
+  border-left: none;
+  cursor: pointer;    background-color: #37798F;
+}
+
+input#search:focus {
+    outline-offset: 0;
+    outline-color: #37798F00;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #16181b;
+    text-decoration: none;
+    background-color: #37798F54;}
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.btn-new{color:white !important;
+    background-color: #37798F !important;
+    font-size: small !important;}

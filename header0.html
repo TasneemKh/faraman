@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+  
+      <meta charset="utf-8">
+	  <link rel="stylesheet" type="text/css" href="headerCss.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title> فرمان </title>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+ <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+       <style>
+	   	  .navbar-light .navbar-nav .nav-link {
+    color: #37798F;
+}
+  </style>
+  </head>
+
+	<body>
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        يمكنك ان تتواصل معنا <br>
+على رقم الهاتف :<br>
+255555555<br>
+او على الايميل :<br>
+ttt@gmail.com<br>
+</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+	<header style="      position: sticky;   top: 0;    width: 100%;   z-index: 100; ">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light" style="        top: 0;    width: 100%;    border-bottom: 1px solid #cccccc40;">
+	<div class="container">
+	<a class="navbar-brand" href="law.html"><img src="img/Group 399.png" style="    width: 100px;"> </a>
+	
+
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+	  <span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse navbarsExample07" id="">
+	<form class="example mr-4" action="">
+  <input type="text" class="" placeholder="بحث" id="search"name="search">
+  <button type="button"><i class="fa fa-search"></i></button>
+</form>
+
+
+	  <ul class="navbar-nav NavItem mr-auto">
+	  <li class="nav-item ">
+		  <a class="nav-link unchecked" href="#" style="font-weight: 900;">المدونة <span class="sr-only">(current)</span></a>
+		</li>
+		<li class="nav-item ">
+		  <a class="nav-link unchecked" href="law.html" style="font-weight: 900;">الرئيسة <span class="sr-only">(current)</span></a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link unchecked" href="#" style="font-weight: 900;" data-toggle="modal" data-target="#exampleModal">اتصل بنا </a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link unchecked" href="logInSmartLow.html" style="font-weight: 900;">تسجيل الدخول </a>
+		</li>			
+	  </ul>
+	   <form class="form-inline">
+		<button class="btn btn-new" type="button"><i class="fas fa-user-plus pl-1"></i>ابدأ هنا</button>
+	  </form>
+	</div>
+	</div>
+	</nav>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light p-0"style="    position: sticky;   top: 57px;  width: 100%;  ">
+	<div class="container px-4">
+	<div class="row">
+
+	<div class="collapse navbar-collapse navbarsExample07" id="">
+	<ul class="navbar-nav "id="c" style="font-size: small;     padding-right: 0px;">
+
+	<li class="nav-item dropdown ">
+	<a class="nav-link dropdown-toggle itemNavLink" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"style="   font-weight: bolder;">
+	القوانين 
+	</a>
+	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="    min-width: 19rem;">
+	<a class="dropdown-item" href="#">القوانين القديمة المطبقة في فلسطين</a>
+	<a class="dropdown-item" href="#">القوانين التي صدرت من 1994-2006</a>
+	<a class="dropdown-item" href="#">القوانين التي صدرت من 2006-2019 غزة</a>
+	<a class="dropdown-item" href="#">المراسيم والقرارات من عام 2006-2019ضفةغربية</a>
+	
+	</div>
+	</li>
+	<li class="nav-item dropdown mega-dropdown">
+	<a class="nav-link dropdown-toggle itemNavLink" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="   font-weight: bolder;">
+	السوابق القضائية
+	</a>
+		<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        
+      <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">زمني </a>
+                <ul class="dropdown-menu" style="right:9.7rem">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                </ul>
+              </li>
+          <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">نوعي</a>
+            <ul class="dropdown-menu" style="right:9.7rem">
+              <li><a class="dropdown-item" href="#">Action </a></li>
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Action</a></li>
+            </ul>
+	</li>	
+	</ul>
+	
+	</li>
+	<li class="nav-item dropdown">
+	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="   font-weight: bolder;">
+	قوانين عربية
+	</a>
+	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="    font-size: smaller;   min-width: 12rem;">
+	<a class="dropdown-item" href="#">القانون التونسي</a>
+	<a class="dropdown-item" href="#">القانون العراقي</a>
+	<a class="dropdown-item" href="#">المدني الجزائري</a>
+	
+	<a class="dropdown-item" href="#">قانون  الاماراتي</a>
+	
+	<a class="dropdown-item" href="#">قانون المصري</a>
+	</div>
+	</li>
+	<li class="nav-item dropdown">
+	<a class="nav-link dropdown-toggle itemNavLink" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="   font-weight: bolder;">
+مذكرات قانونية 
+	</a>
+	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="  font-size: smaller;   min-width: min-content;">
+	<a class="dropdown-item" href="#">حمدي خليفة</a>
+	<a class="dropdown-item" href="#">أحمد علي ابوسماقة,جهاد سالم الشرفات</a>
+	
+	</div>
+	</li>
+	<li class="nav-item dropdown">
+	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="   font-weight: bolder;">
+مكتبة قانونية	</a>
+	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	<a class="dropdown-item" href="#">رسائل ماجستير ودكتوراه</a>
+	<a class="dropdown-item" href="#">بحوث قانونية</a>
+	<a class="dropdown-item" href="#">سنهوري</a>
+	<a class="dropdown-item" href="#">كتب قانونية</a>
+	</div>
+	</li>
+	<li class="nav-item dropdown">
+	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="   font-weight: bolder;">
+معاهدات واتفاقيات  	</a>
+	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="  font-size: smaller;   min-width: min-content;">
+	<a class="dropdown-item" href="#">قرارات الجمعية العامة ومجلس الامن لقضية الفلسطينية  </a>
+	<a class="dropdown-item" href="#">القدس في اهم القرارات الدولية</a>
+	<a class="dropdown-item" href="#">الاتفاقيات والمواثيق والمذكرات والنصوص المتعلقة بالقضية الفلسطينية</a>
+	<a class="dropdown-item" href="#">الاتفاقيات الفلسطينية الاسرائيلية</a>
+	<a class="dropdown-item" href="#">اتفاقيات جامعة الدول العربية والاتفاقيات العربية</a>
+	<a class="dropdown-item" href="#">اتفاقيات منظمة المؤتمر الاسلامي </a>
+	<a class="dropdown-item" href="#">المواثيق العربية</a>
+	<a class="dropdown-item" href="#">الاتفاقيات العربية الاسائيلية</a>
+	<a class="dropdown-item" href="#">اتفاقيات القانون الدولي الانساني</a>
+	
+	<a class="dropdown-item" href="#">مواثيق المنظمات الدولية والعربية</a>
+	<a class="dropdown-item" href="#">الاتفاقيات و المعاهدات والبروتوكولات والاعلانات المتعلقة بحقوق الانسان</a>
+	<a class="dropdown-item" href="#">اتفاقيات ومعاهدات حقوق الملكية الفكرية</a>
+	<a class="dropdown-item" href="#">اتفاقيات منظمة العمل الدولية</a>
+	<a class="dropdown-item" href="#">الوثائق الاوروبية المتعلقة بحقوق الانسان</a>
+	<a class="dropdown-item" href="#">الوثائق الامريكية المتعلقة بحقوق الانسان</a>
+	
+	<a class="dropdown-item" href="#">الوثائق الافريقية المتعلقة بحقوق الانسان</a>
+	<a class="dropdown-item" href="#">الوثائق الاسلامية</a>
+	<a class="dropdown-item" href="#">الاتفاقيات المتعلقة بالبيئة</a>
+	<a class="dropdown-item" href="#">اتفاقيات الامم المتحدة</a>
+	<a class="dropdown-item" href="#">اتفاقيات بين مصر ومنظمة التحرير الفلسطينية</a>
+
+	</div>
+	</li>
+	
+	<li class="nav-item dropdown">
+	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="   font-weight: bolder;">
+	نماذج  عقود ودعاوي 
+
+	</a>
+	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="   min-width: 12rem;">
+	<a class="dropdown-item" href="#">اجراءات </a>
+	<a class="dropdown-item" href="#">اخطارات</a>
+	<a class="dropdown-item" href="#">السندات</a>
+	<a class="dropdown-item" href="#">شركات</a>
+	<a class="dropdown-item" href="#">طلبات</a>
+	<a class="dropdown-item" href="#">عقود</a>
+	<a class="dropdown-item" href="#">لوائح الاستئناف</a>
+	<a class="dropdown-item" href="#">مجلد الجزاء</a>
+	<a class="dropdown-item" href="#">مجلد النماذج الشرعية</a>
+	<a class="dropdown-item" href="#">نماذج عقود وسندات جديدة</a>
+	<a class="dropdown-item" href="#">نماذج ولوائح ودعاوي </a>
+	<a class="dropdown-item" href="#">انظمة </a>
+	<a class="dropdown-item" href="#">لوائح تنفيذية</a>
+	</div>
+	
+	</li>
+	<li class="nav-item dropdown">
+	<a class="nav-link dropdown-toggle itemNavLink" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"style="   font-weight: bolder;">
+معجم القانوني
+	</a>
+	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="  font-size: smaller;   min-width: min-content;">
+	<a class="dropdown-item" href="#">عربي لانجليزي</a>
+	<a class="dropdown-item" href="#">انجليزي لعربي</a>
+	
+	</div>
+	</li>
+	<li class="nav-item dropdown">
+	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="   font-weight: bolder;">
+	نماذج واسئلة
+	</a>
+	<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        
+      <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">محامين متدربين </a>
+                <ul class="dropdown-menu" style="right:9.7rem">
+                  <li><a class="dropdown-item" href="#">امتحانات المزاولة</a></li>
+                  
+                </ul>
+              </li>
+          <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">طلبة حقوق </a>
+            <ul class="dropdown-menu" style="right:9.7rem">
+              <li><a class="dropdown-item" href="#">طلبة جامعة الازهر </a></li>
+              <li><a class="dropdown-item" href="#">طلبة جامعة الامة</a></li>
+              <li><a class="dropdown-item" href="#">طلبة جامعة الاسراء </a></li>
+            </ul>
+	</li>	
+	</ul>
+	<script>$('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+  if (!$(this).next().hasClass('show')) {
+    $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+  }
+  var $subMenu = $(this).next(".dropdown-menu");
+  $subMenu.toggleClass('show');
+
+
+  $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+    $('.dropdown-submenu .show').removeClass("show");
+  });
+
+
+  return false;
+});</script>
+	</li>
+	
+	<li class="nav-item dropdown mr-3">
+	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	<i class="fas fa-globe"></i>
+	</a>
+	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="right: -150px;">
+	<a class="dropdown-item" href="#" onClick="rtl()">AR</a>
+	<a class="dropdown-item" href="#"  onClick="ltr()">EN </a>
+
+	</div>
+	<script>
+	function rtl(){
+document.body.style.direction = "rtl";
+$(".mainTit").css("right","14%");
+$("html").children().css("text-align","right");
+$(".NavItem").addClass("mr-auto");
+	}
+	function ltr(){
+document.body.style.direction = "ltr";
+$("html").children().css("text-align","left");
+$(".mainTit").css("right","60%");
+$(".NavItem").removeClass("mr-auto");
+$(".NavItem").addClass("ml-auto");
+
+	}
+	</script>
+	</li>
+
+	</ul>
+
+	</div>
+
+	</div>
+	</div>
+	</nav>
+	
+</header>
+</body>

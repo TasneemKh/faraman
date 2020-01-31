@@ -1,0 +1,294 @@
+<html lang="ar">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+ 
+ <title>Signin Template </title>
+
+    <style>
+	 body{text-align: right;direction: rtl;}
+.br {
+    border: 0;
+}
+.textImgTit{    position: absolute;
+    top: 5%;    right: 0;
+    background-color: white;
+	    font-size: x-small;}
+		.btnSearchCol{color: #d2bb33;
+    background-color: #37798F;
+    font-size: larger;
+	    width: -webkit-fill-available;}
+		.flRow{align-items: flex-start;flex-wrap: wrap;height: 100%;justify-content: space-between}
+		.linkTxt{ display: block;
+    color: black;
+    font-weight: 500;
+    line-height: 1.2;}
+	.leftSid{
+float:left}
+	.xxWidth{      min-width: 160px;
+    max-width: 234px;
+}
+    </style>
+  
+  </head>
+	<body class="">
+	<div class="container my-1 p-4" >
+	  <h1 class="mb-3 text-center mb-5" style="color: #37798F;">تصفح قائمة المحامين</h1>
+	  <form>
+<div class="row px-5 px-5 pt-1">
+    <div class="form-group col-md-3 pt-1">
+      <label for="inputRelated">اسم المحامي</label>
+      <input type="text" class="form-control" id="inputRelated">
+    </div>
+    <div class="form-group col-md-3">
+     
+	 <label class="my-1 " for="inlineFormCustomSelectPref">سنوات الخبرة</label>
+   <input type="text" class="form-control" id="inlineFormCustomSelectPref">
+    </div>
+	
+   <div class="form-group col-md-3">
+    <label class="my-1 mr-2" for="year">خبرة علمية</label>
+  <select class="custom-select my-1 mr-sm-2" id="year">
+    <option selected>  </option>
+    <option value="1">بكالوريس</option>
+    <option value="2">ماجستير</option>
+    <option value="3">دكتوراه</option>
+  </select>
+    </div>
+	<div class="col-md-3 pt-4 mt-2">
+      <button type="submit" class="btn btnSearchCol mb-2" id="search">بحث</button>
+    </div>
+	</div>
+  </form>
+	
+	</div>
+<div class="container" >
+	<fieldset class="borderfieldset  p-2  mt-2" style="   border-top: 1px solid #b8b7b563;">
+	<legend  class="w-auto " style="text-align: center;">  المستشارين     </legend>
+	<div class="row">
+	<div class="col-sm-12">
+	<a class="seeMore leftSid"  href="#" role="button" aria-expanded="false"style="color:#37798F">
+	 <span>&#187;</span>
+	المزيد
+	</a>
+	</div>
+	</div>
+	<div class="row mt-3 mb-5 mx-auto animated  zoomInUp " >
+	<div class="card-deck pr-5 pl-5">
+	<div class=" col-md-3 card br xxWidth">
+	<img class="card-img-top" src="img/img1.png" alt="Card image cap">
+	<div class="rating d-flex flex-nowrap">
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star unchecked flex-fill"></span>
+	<span class="fa fa-star unchecked flex-fill"></span>
+	</div>
+	<div class="card-body text-center">
+<a class="card-title linkTxt" href="#" style="">أ.احمد النصري</a>
+	<p class="card-text">ماجستير</p>
+	</div>
+	</div>
+	<div class=" col-md-3 card br xxWidth">
+	<img class="card-img-top" src="img/img2.png" alt="Card image cap">
+	<div class="rating d-flex flex-nowrap">
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star unchecked flex-fill"></span>
+	</div>
+	<div class="card-body text-center ">
+	<a class="card-title linkTxt" href="#" style="">أ.اسامة حمدان</a>
+	<p class="card-text">بكالوريس</p>
+
+	</div>
+	</div>
+	<div class=" col-md-3 card br xxWidth">
+	<img class="card-img-top" src="img/img3.png" alt="Card image cap">
+	<div class="rating d-flex flex-nowrap">
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star unchecked flex-fill"></span>
+	<span class="fa fa-star unchecked flex-fill"></span>
+	<span class="fa fa-star unchecked flex-fill"></span>
+	</div>
+	<div class="card-body text-center">
+<a class="card-title linkTxt" href="#" style="">أ.حنين عياد</a>
+	<p class="card-text">بكالوريس</p>	  
+	</div>
+	</div>
+	<div class=" col-md-3 card br xxWidth">
+	<img class="card-img-top" src="img/img4.png" alt="Card image cap">
+	<div class="rating d-flex flex-nowrap">
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	</div>
+	<div class="card-body text-center">
+<a class="card-title linkTxt" href="#" style="">أ.محمد النصري</a>
+	<p class="card-text">دكتوراه</p>
+	</div>
+	</div>
+	</div>
+	</div>
+	</fieldset>
+	<fieldset class="borderfieldset  p-2  mt-2" style="   border-top: 1px solid #b8b7b563;">
+	<legend  class="w-auto " style="text-align: center;">  المحامين    </legend>
+	<div class="row">
+	<div class="col-sm-12">
+	<a class="seeMore leftSid"  href="#" role="button" aria-expanded="false"style="color:#37798F">
+	 <span>&#187;</span>
+	المزيد
+	</a>
+	</div>
+	</div>
+	<div class="row mt-3  mx-auto mb-5 animated  zoomInUp" >
+	<div class="card-deck pr-5 pl-5">
+	<div class="card br xxWidth">
+	<img class="card-img-top" src="img/img1.png" alt="Card image cap">
+	<div class="rating d-flex flex-nowrap">
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star unchecked flex-fill"></span>
+	<span class="fa fa-star unchecked flex-fill"></span>
+	</div>
+	<div class="card-body text-center">
+<a class="card-title linkTxt" href="#" style="">أ.احمد النصري</a>
+	<p class="card-text">ماجستير</p>
+	</div>
+	</div>
+	<div class="card br xxWidth">
+	<img class="card-img-top" src="img/img2.png" alt="Card image cap">
+	<div class="rating d-flex flex-nowrap">
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star unchecked flex-fill"></span>
+	</div>
+	<div class="card-body text-center ">
+	<a class="card-title linkTxt" href="#" style="">أ.اسامة حمدان</a>
+	<p class="card-text">بكالوريس</p>
+
+	</div>
+	</div>
+	<div class="card br xxWidth">
+	<img class="card-img-top" src="img/img3.png" alt="Card image cap">
+	<div class="rating d-flex flex-nowrap">
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star unchecked flex-fill"></span>
+	<span class="fa fa-star unchecked flex-fill"></span>
+	<span class="fa fa-star unchecked flex-fill"></span>
+	</div>
+	<div class="card-body text-center">
+<a class="card-title linkTxt" href="#" style="">أ.حنين عياد</a>
+	<p class="card-text">بكالوريس</p>	  
+	</div>
+	</div>
+	<div class="card br xxWidth">
+	<img class="card-img-top" src="img/img4.png" alt="Card image cap">
+	<div class="rating d-flex flex-nowrap">
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	</div>
+	<div class="card-body text-center">
+<a class="card-title linkTxt" href="#" style="">أ.محمد النصري</a>
+	<p class="card-text">دكتوراه</p>
+	</div>
+	</div>
+	</div>
+	</div>
+	<div class="row mt-3 mb-5 animated  zoomInUp" >
+	<div class="card-deck pr-5 pl-5">
+	<div class="card br xxWidth">
+	<img class="card-img-top" src="img/img1.png" alt="Card image cap">
+	<div class="rating d-flex flex-nowrap">
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star unchecked flex-fill"></span>
+	<span class="fa fa-star unchecked flex-fill"></span>
+	</div>
+	<div class="card-body text-center">
+<a class="card-title linkTxt" href="#" style="">أ.احمد النصري</a>
+	<p class="card-text">ماجستير</p>
+	</div>
+	</div>
+	<div class="card br xxWidth">
+	<img class="card-img-top" src="img/img2.png" alt="Card image cap">
+	<div class="rating d-flex flex-nowrap">
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star unchecked flex-fill"></span>
+	</div>
+	<div class="card-body text-center ">
+	<a class="card-title linkTxt" href="#" style="">أ.اسامة حمدان</a>
+	<p class="card-text">بكالوريس</p>
+
+	</div>
+	</div>
+	<div class="card br xxWidth">
+	<img class="card-img-top" src="img/img3.png" alt="Card image cap">
+	<div class="rating d-flex flex-nowrap">
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star unchecked flex-fill"></span>
+	<span class="fa fa-star unchecked flex-fill"></span>
+	<span class="fa fa-star unchecked flex-fill"></span>
+	</div>
+	<div class="card-body text-center">
+<a class="card-title linkTxt" href="#" style="">أ.حنين عياد</a>
+	<p class="card-text">بكالوريس</p>	  
+	</div>
+	</div>
+	<div class="card br xxWidth">
+	<img class="card-img-top" src="img/img4.png" alt="Card image cap">
+	<div class="rating d-flex flex-nowrap">
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	</div>
+	<div class="card-body text-center">
+<a class="card-title linkTxt" href="#" style="">أ.محمد النصري</a>
+	<p class="card-text">دكتوراه</p>
+	</div>
+	</div>
+	</div>
+	</div>
+	</fieldset>
+	</div>
+	
+<nav aria-label="Page navigation example" class="my-4">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+
+	</body>
+	</html>

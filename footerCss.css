@@ -1,0 +1,21 @@
+body{    direction: rtl;    text-align: right;
+   }
+
+.footerBg {
+     background-color: #37798F; 
+}
+.iconFooter {
+		text-align: left;
+		
+	}
+	.iconNew{    display: inline-block;
+    border-radius: 50%;
+    width: 27px;
+    height: 27px;
+    text-align: center;
+    background-color: #F8B40E;
+    color: #37798F;}
+	
+	.footerCol {
+    color: #D2BB33;
+}

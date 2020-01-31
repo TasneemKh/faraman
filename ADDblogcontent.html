@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+  
+      <meta charset="utf-8">
+	  <link rel="stylesheet" type="text/css" href="headerCss.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <title> فرمان </title>
+	
+	   <style>
+  </style>
+  </head>
+
+	<body>
+ <div class="nav " id="myTab" role="tablist">
+    <a class="nav-link " id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><i class="fas fa-plus"></i><span>اضافة قانوني </span></a>
+
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><i class="fas fa-times"></i><span>حذف  قانوني </span></a>
+
+  
+</div>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show " id="home" role="tabpanel" aria-labelledby="home-tab">	 <div class="container px-5">
+	  <div class=" mt-5" style="">
+    <form>
+	 <ul  class="list-unstyled" id="list" >
+		<li style="display: flex;font-weight: bolder;color: #37798f;" ID="" class="my-3">
+		<div class="col-md-8">اسماء القانونيين</div> 
+		<div class="form-check form-check-inline col-md-2">
+			<label class="form-check-label" for="inlineRadio1">محامين </label>
+		</div>
+		<div class="form-check form-check-inline col-md-2">
+			<label class="form-check-label" for="inlineRadio1">استشاريين</label>
+		</div>
+		</li>
+     
+    </ul>
+    <div>
+	<button type="button" class="mr-5 col-2 btn btn-outline-secondary ">حفظ</button>
+	</div>
+	</form>
+  </div>
+  </div>
+</div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"> <div class=" mt-5" style="">
+    <form>
+	 <ul  class="list-unstyled" id="list1" data-toggle=""  >
+		<li style="display: flex;font-weight: bolder;color: #37798f;" ID="" class="my-3">
+		<div class="col-md-8">اسماء القانونيين</div> 
+		<div class="form-check form-check-inline col-md-2">
+			<label class="form-check-label" for="inlineRadio1">تخصص </label>
+		</div>
+<div class="form-check form-check-inline col-md-2">
+			<label class="form-check-label " for="inlineRadio1">حذف </label>
+		</div>
+		</li>
+     
+    </ul>
+    <div>
+	<button type="button" class="mr-5 col-2 btn btn-outline-secondary ">حفظ</button>
+	</div>
+	</form>
+  </div></div>
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+</div>
+
+
+  <div class="container px-5">
+		<div class="px-3  m-4 container"  id="home">
+	
+	</div>
+   
+	<div class="px-3  m-4 container"  id="profile">	  
+	 
+ </div>
+  </div>
+  <script src="jquery.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+var i=0;
+$.get('https://jsonplaceholder.typicode.com/todos', function(data) {
+		for(let i in data.slice(0,12)) {
+		li = $('<li  style="display: flex;" >');
+		li.attr('id', data[i].id);
+		div=$('<div class="col-md-8">');
+		div.text(data[i].title);	
+		div0=$('<div class="form-check form-check-inline col-md-2">');
+		inp=$('<input class="form-check-input" type="radio"  value="lawyer">');
+		var in0="inlineRadioOptions";
+		inp.attr('name',in0);
+		var t="lawyer"+data[i].id;
+		inp.attr('id',t);
+		div0.append(inp);
+		div1=$('<div class="form-check form-check-inline col-md-2">');
+		inp1=$('<input class="form-check-input" type="radio"  value="Consultant">');
+		var in1="inlineRadioOptions";
+		inp1.attr('name',in1);
+		var t1="Consultant"+data[i].id;
+		inp1.attr('id',t1);
+		div1.append(inp1);
+		li.append(div);
+		li.append(div0);
+		li.append(div1);
+		$('#list').append(li);
+
+				}
+			});
+			</script>
+<script>
+var z=0;
+$.get('https://jsonplaceholder.typicode.com/todos',function(data) {
+		for(let z in data.slice(0,12)) {
+		li = $('<li  style="display: flex;" class="li" >');
+		li.attr('id', data[z].id);
+		div=$('<div class="col-md-8">');
+		div.text(data[z].title);	
+		div0=$('<div class="form-check form-check-inline">');
+		lab=$('<label class="form-check-label" for="inlineRadio1">');
+		lab.text(data[z].completed);
+		div0.append(lab);
+		div1=$('<div class="form-check form-check-inline">');
+		a=$('<a href="#" onClick="removeItem(item, i)" class="text-danger remove">');
+		a.text('X');
+		div1.append(a);
+		li.append(div);
+		li.append(div0);
+		li.append(div1);
+		$('#list1').append(li);
+
+				}
+			});
+			
+		$(document).on("click", ".remove", function() {
+       $(this).closest('.li').remove(); 
+});
+			</script>
+</body>

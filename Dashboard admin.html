@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ar">
+	<head>
+		<meta charset="utf-8">
+		  <link rel="stylesheet" type="text/css" href="lawCss.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title> فرمان </title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.css">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<style>
+body{direction:rtl}
+#v-pills-tab1{text-align:right;background-color: #f8f9fa;}
+a.nav-link{color: #37798F ;}
+#v-pills-tab1{font-family: serif;    border: 1px solid #e2ddf0;}
+#v-pills-tabContent1{text-align:right}
+.nav-pillss .nav-link.active, .nav-pillss .show>.nav-link {
+border-left: 4px solid #37798F;
+color: #37798F;
+background-color: #f8f9fa;
+
+}
+.nav-pillss .nav-link {
+border-radius: 0;
+border-bottom: 1px solid #37798F26;
+margin-right: 10px;
+}
+.chip.chip-md {
+height: 100px;
+line-height: 42px;
+border-radius: 21px;
+}
+.chip.chip-md img {
+height: 70px;
+width: 70px;
+border-radius: 50px;
+}
+
+		</style>
+	<script>
+		
+		function loadFunction(){
+		var name =document.getElementById("name").innerHTML
+	
+		document.getElementById("welcome").innerHTML = "مرحبا "+name;
+		}
+		function convert(o){
+	
+		document.getElementById("text").innerHTML = o;
+		}
+		
+		
+		</script>
+	</head>	
+	<body  onload="loadFunction()">
+	<div class="text-center py-3" style="   background-color: #FBFBFB;">
+	<p style="font-family: sans-serif;font-weight: bolder;font-size: x-large;" >
+	حسابي</p>
+	<span id="text">لوحة التحكم الرئيسية</span>
+	</div>
+<div class="container">
+	<div class="row">
+	<div class="col-md-3">
+		<div class="nav flex-column nav-pillss mr-3 pt-3" id="v-pills-tab1" role="tablist" aria-orientation="vertical" style="   min-width: 150px;">
+			<img src="img/user.png" class="rounded-circle mx-auto" style=" width: 150px;"> 
+			<h3  class="text-center my-1" style="font-family: monospace;"><span id="name">اية</span>محمود</h3>
+			<a class="nav-link active" id="v-pills-home-tab" data-toggle="pill"onClick="convert('لوحة التحكم الرئيسية')" href="#v-pills-home"  role="tab" aria-controls="v-pills-home" aria-selected="true">لوحة التحكم الرئيسية</a>
+			<a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false" onClick="convert('الطلبات')">الطلبات</a>
+			<a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false" onClick="convert('المفضلة')">المفضلة</a>
+			<a class="nav-link" id="v-pills-law-tab" data-toggle="pill" href="#v-pills-law" role="tab" aria-controls="v-pills-law" aria-selected="false" onClick="convert('اضافة محامي  ')">اضافة محامي </a>    
+			<a class="nav-link" id="v-pills-data-tab" data-toggle="pill" href="#v-pills-data" role="tab" aria-controls="v-pills-data" aria-selected="false" onClick="convert('ادخال البيانات')">ادخال البيانات </a>    
+			<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false" onClick="convert('العناوين')">العناوين</a>
+			<a class="nav-link" id="v-pills-blog-tab" data-toggle="pill" href="#v-pills-blog" role="tab" aria-controls="v-pills-blog" aria-selected="false" onClick="convert('المدونة')">المدونة</a>
+			<a class="nav-link" id="v-pills-settings-tab1" data-toggle="pill" href="#v-pills-settings1" role="tab" aria-controls="v-pills-settings1" aria-selected="false" onClick="convert('تفاصيل الحساب')">تفاصيل الحساب</a>
+			<a class="nav-link" id="v-pills-settings-tab2" data-toggle="pill" href="#v-pills-settings2" role="tab" aria-controls="v-pills-settings2" aria-selected="false" onClick="convert('تسجيل الخروج')">تسجيل الخروج</a>
+		</div>
+	</div>
+	<div class="col-md-9">
+	<div class="tab-content py-5" id="v-pills-tabContent1">
+		<div style="COLOR: #504a4a;"class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+			<span id="welcome"></span>
+			<p class="my-3"> من خلال لوحة تحكم الحساب الخاص بك . يمكنك استعراض احدث الطلبات  
+				إدارة عناوين الشحن والفواتير الخاصة بك 
+			<strong> بالإضافة الى تعديل كلمة المرور وتفاصيل حسابك </strong>
+			</p>
+			<div class="my-4 d-flex" style="   flex-wrap: wrap;">
+				<button type="button" id="req"onclick="" class="btn btn-outline-secondary btn-lg mx-2 my-1 px-5">الطلبات</button>
+				<button type="button" class="btn btn-outline-secondary btn-lg  mx-2  my-1 px-5">المفضلة</button>
+				<button type="button" class="btn btn-outline-secondary btn-lg mx-2 my-1 px-5">اضافة محامي</button>
+				<button type="button" class="btn btn-outline-secondary btn-lg mx-2 my-1 px-5">ادخال البيانات</button>
+				<button type="button" class="btn btn-outline-secondary btn-lg mx-2 my-1 px-5">العناوين</button>
+				<button type="button" class="btn btn-outline-secondary btn-lg mx-2 my-1 px-5">المدونة</button>
+				<button type="button" class="btn btn-outline-secondary btn-lg mx-2 my-1  px-5">تفاصيل الحساب</button>
+			</div>
+		</div>
+		<div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+		<div class=" row chip chip-md p-4 my-4">
+			<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-10.jpg" alt="Contact Person"> 
+			<div class="card-body  col-md-6 col-7 p-2">
+				<h6 class="card-title"> Anna Smith  </h6> 
+				<small class="card-text">اعجب محمد في المدونة "حق المراة القانوني </small>
+			</div>
+			<div class="py-3">
+				<a href="#" class="mx-3"> قبول</a>
+				<a href="#"> رفض</a>
+				<a href="#" data-toggle="modal" data-target="#ChooseLawyer"> <i class="fas fa-share mx-4"></i></a>
+			</div>
+		</div>
+		<div class=" row chip chip-md p-4 my-4">
+			<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-10.jpg" alt="Contact Person"> 
+			<div class="card-body  col-md-6 col-7 p-2">
+			<h6 class="card-title"> Anna Smith  </h6> 
+			<small class="card-text">اعجب محمد في المدونة "حق المراة القانوني </small>
+			</div>
+			<div class="py-3">
+			<a href="#" class="mx-3"> قبول</a>
+			<a href="#"> رفض</a>
+			<a href="#" data-toggle="modal" data-target="#ChooseLawyer"> <i class="fas fa-share mx-4"></i></a>
+			</div>
+		</div>
+		<div class=" row chip chip-md p-4 my-4">
+			<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-10.jpg" alt="Contact Person"> 
+			<div class="card-body  col-md-6 col-7 p-2">
+			<h6 class="card-title"> Anna Smith  </h6> 
+			<small class="card-text">اعجب محمد في المدونة "حق المراة القانوني </small>
+			</div>
+			<div class="py-3">
+			<a href="#" class="mx-3"> قبول</a>
+			<a href="#"> رفض</a>
+			<a href="#" data-toggle="modal" data-target="#ChooseLawyer"> <i class="fas fa-share mx-4"></i></a>
+			</div>
+		</div>
+		<div class=" row chip chip-md p-4 my-4">
+			<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-10.jpg" alt="Contact Person"> 
+			<div class="card-body  col-md-6 col-7 p-2">
+			<h6 class="card-title"> Anna Smith  </h6> 
+			<small class="card-text">اعجب محمد في المدونة "حق المراة القانوني </small>
+			</div>
+			<div class="py-3">
+			<a href="#" class="mx-3"> قبول</a>
+			<a href="#"> رفض</a>
+			<a href="#" data-toggle="modal" data-target="#ChooseLawyer"> <i class="fas fa-share mx-4"></i></a>
+			</div>
+		</div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="ChooseLawyer" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+			<div class="modal-content">
+			<div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLongTitle">اختيار محامي</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+			</button>
+			</div>
+			<div class="modal-body">
+			<div class="col-md-8 " style="">
+			<label>اسماء المحامين </label>
+			<select class="form-control " id="exampleFormControlSelect3">
+			<option>المحامي احمد </option>
+			<option>المحامي محمد </option>
+			<option>المحامي احمد </option>
+			<option>المحامي محمد </option>
+			<option>المحامي احمد </option>
+			<option>المحامي محمد </option>
+			</select> 
+			</div>
+			</div>
+			<div class="modal-footer">
+			<button type="button" class="btn btn-secondary mx-3" data-dismiss="modal">اغلق</button>
+			<button type="button" class="btn btn-primary">ارسل </button>
+			</div>
+			</div>
+			</div>
+		</div>
+		</div>
+		<div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+		<div class=" row chip chip-md p-4 my-4">
+		<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-10.jpg" alt="Contact Person"> 
+		<div class="card-body  col-md-6 col-7 p-2">
+		<h6 class="card-title"> Anna Smith  </h6> 
+		<small class="card-text">اعجب محمد في المدونة "حق المراة القانوني </small>
+		</div>
+		<div class="py-3">
+		<a href="#"> <i class="fas fa-thumbs-up fa-1x mx-3	"></i></a>
+		<a href="#"> <i class="fas fa-heart fa-1x	"></i></a>
+
+		</div>
+		</div>
+		<div class=" row chip chip-md p-4 my-4">
+		<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-10.jpg" alt="Contact Person"> 
+		<div class="card-body  col-md-6 col-7 p-2">
+		<h6 class="card-title"> Anna Smith  </h6> 
+		<small class="card-text">اعجب محمد في المدونة "حق المراة القانوني </small>
+		</div>
+		<div class="py-3">
+		<a href="#"> <i class="fas fa-thumbs-up fa-1x mx-3	"></i></a>
+		<a href="#"> <i class="fas fa-heart fa-1x	"></i></a>
+		</div>
+		</div>
+		<div class=" row chip chip-md p-4 my-4">
+		<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-10.jpg" alt="Contact Person"> 
+		<div class="card-body  col-md-6 col-7 p-2">
+		<h6 class="card-title"> Anna Smith  </h6> 
+		<small class="card-text">اعجب محمد في المدونة "حق المراة القانوني </small>
+		</div>
+		<div class="py-3">
+		<a href="#"> <i class="fas fa-thumbs-up fa-1x mx-3	"></i></a>
+		<a href="#"> <i class="fas fa-heart fa-1x	"></i></a>
+		</div>
+		</div>
+		<div class=" row chip chip-md p-4 my-4">
+		<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-10.jpg" alt="Contact Person"> 
+		<div class="card-body  col-md-6 col-7 p-2">
+		<h6 class="card-title"> Anna Smith  </h6> 
+		<small class="card-text">اعجب محمد في المدونة "حق المراة القانوني </small>
+		</div>
+		<div class="py-3">
+		<a href="#"> <i class="fas fa-thumbs-up fa-1x mx-3	"></i></a>
+		<a href="#"> <i class="fas fa-heart fa-1x	"></i></a>
+		</div>
+		</div>
+		<div class=" row chip chip-md p-4 my-4">
+		<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-10.jpg" alt="Contact Person"> 
+		<div class="card-body  col-md-6 col-7 p-2">
+		<h6 class="card-title"> Anna Smith  </h6> 
+		<small class="card-text">اعجب محمد في المدونة "حق المراة القانوني </small>
+		</div>
+		<div class="py-3">
+		<a href="#"> <i class="fas fa-thumbs-up fa-1x mx-3	"></i></a>
+		<a href="#"> <i class="fas fa-heart fa-1x	"></i></a>
+		</div>
+		</div>
+		</div>
+		<div class="tab-pane fade" id="v-pills-law" role="tabpanel" aria-labelledby="v-pills-law-tab" >
+		<div class="nav " id="myTab" role="tablist">
+		<a class="nav-link " id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"style="   text-align: center;">
+		<i class="fas fa-plus"></i>
+		<span style="   display: block;">اضافة قانوني </span></a>
+
+		<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" style="   text-align: center;"><i class="fas fa-times"></i><span style="
+		display: block;
+		">حذف  قانوني </span></a>
+
+
+		</div>
+		<div class="tab-content" id="myTabContent">
+		<div class="tab-pane fade show " id="home" role="tabpanel" aria-labelledby="home-tab">	 <div class="container ">
+		<div class=" mt-5" style="">
+		<form>
+		<ul  class="list-unstyled" id="list" >
+		<li style="display: flex;font-weight: bolder;color: #37798f;" ID="" class="my-3">
+		<div class="col-md-8">اسماء القانونيين</div> 
+		<div class="form-check form-check-inline col-md-2">
+		<label class="form-check-label" for="inlineRadio1">محامين </label>
+		</div>
+		<div class="form-check form-check-inline col-md-2">
+		<label class="form-check-label" for="inlineRadio1">استشاريين</label>
+		</div>
+		</li>
+
+		</ul>
+		<div>
+		<button type="button" class="mr-5 col-2 btn btn-outline-secondary ">حفظ</button>
+		</div>
+		</form>
+		</div>
+		</div>
+		</div>
+		<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"> <div class=" container" style="">
+		<form>
+		<ul  class="list-unstyled" id="list1" data-toggle=""  >
+		<li style="display: flex;font-weight: bolder;color: #37798f;" ID="" class="my-3">
+		<div class="col-md-8">اسماء القانونيين</div> 
+		<div class="form-check form-check-inline col-md-2">
+		<label class="form-check-label" for="inlineRadio1">تخصص </label>
+		</div>
+		<div class="form-check form-check-inline col-md-2">
+		<label class="form-check-label " for="inlineRadio1">حذف </label>
+		</div>
+		</li>
+
+		</ul>
+		<div>
+		<button type="button" class="mr-5 col-2 btn btn-outline-secondary ">حفظ</button>
+		</div>
+		</form>
+		</div></div>
+		<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+		</div>
+
+		</div>
+		<div class="tab-pane fade" id="v-pills-data" role="tabpanel" aria-labelledby="v-pills-data-tab" >
+		<div class="container px-5 my-4">
+
+		<div class="col-md-8 my-3  ">
+		<input type="text" name="fileName" class="form-control" placeholder="اسم الملف ">
+		</div>
+		<div class="col-md-8 my-3 ">
+		<input type="text" name="description" class="form-control" placeholder="وصف الملف ">
+		</div>
+
+		<div class="col-md-8 " style="">
+		<select class="form-control" name="exampleFormControlSelect1" id="exampleFormControlSelect1" >
+		<option value="item0" selected disabled> </option>
+		<option value='1'>القوانين </option>
+		<option value='2' >السوابق القضائية</option>
+		<option value='3'>قوانين عربية</option>
+		<option value='4' >مذكرات قانونية</option>
+		<option value="5" >مكتبة قانونية</option>
+		<option value="6">معاهدات واتفاقيات</option>
+		<option value="7">نماذج عقود ودعاوي </option>  
+		<option value="8">معجم قانوني </option>
+		<option value="9">نماذج الاسئلة</option>
+		</select> 
+		</div>
+		<div class="col-md-8 " style="">
+		<select class="form-control   mt-3 " name="exampleFormControlSelect2" id="exampleFormControlSelect2">
+		<option value='القوانين القديمة المطبقة في فلسطين' data-tag='1'>القوانين القديمة المطبقة في فلسطين </option>
+		<option value='القوانين التي صدرت من 1994-2006' data-tag='1'>القوانين التي صدرت من 1994-2006</option>
+		<option value='القوانين التي صدرت من 2006-2019 غزة' data-tag='1'>القوانين التي صدرت من 2006-2019 غزة</option>
+		<option value='المراسيم والقرارات من عام 2006-2019ضفةغربية' data-tag='1'>المراسيم والقرارات من عام 2006-2019ضفةغربية</option>
+		<option value='زمني' data-tag='2'>زمني</option>
+		<option value='نوعي' data-tag='2'>نوعي</option>
+		<option value='القانون التونسي' data-tag='3'>القانون التونسي</option>
+		<option value='القانون العراقي' data-tag='3'>القانون العراقي</option>
+		<option value='المدني الجزائري' data-tag='3'>المدني الجزائري</option>
+		<option value='قانون  الاماراتي' data-tag='3'>قانون  الاماراتي</option>
+		<option value='قانون المصري' data-tag='3'>قانون المصري</option>
+		<option value='حمدي خليفة' data-tag='4'>حمدي خليفة</option>
+		<option value='أحمد علي ابوسماقة,جهاد سالم الشرفات' data-tag='4'>أحمد علي ابوسماقة,جهاد سالم الشرفات</option>
+		<option value='رسائل ماجستير ودكتوراه' data-tag='5'>رسائل ماجستير ودكتوراه</option>
+		<option value='بحوث قانونية' data-tag='5'>بحوث قانونية</option>
+		<option value='سنهوري' data-tag='5'>سنهوري</option>
+		<option value='كتب قانونية' data-tag='5'>كتب قانونية</option>
+		<option value='قرارات الجمعية العامة ومجلس الامن لقضية الفلسطينية' data-tag='6'>قرارات الجمعية العامة ومجلس الامن لقضية الفلسطينية</option>
+		<option value='القدس في اهم القرارات الدولية' data-tag='6'>القدس في اهم القرارات الدولية</option>
+		<option value='الاتفاقيات والمواثيق والمذكرات والنصوص المتعلقة بالقضية الفلسطينية' data-tag='6'>الاتفاقيات والمواثيق والمذكرات والنصوص المتعلقة بالقضية الفلسطينية</option>
+		<option value='الاتفاقيات الفلسطينية الاسرائيلية' data-tag=''>الاتفاقيات الفلسطينية الاسرائيلية</option>
+		<option value='اتفاقيات جامعة الدول العربية والاتفاقيات العربية' data-tag='6'>اتفاقيات جامعة الدول العربية والاتفاقيات العربية</option>
+		<option value='اتفاقيات منظمة المؤتمر الاسلامي' data-tag='6'>اتفاقيات منظمة المؤتمر الاسلامي</option>
+		<option value='المواثيق العربية' data-tag='6'>المواثيق العربية</option>
+		<option value='الاتفاقيات العربية الاسائيلية' data-tag='6'>الاتفاقيات العربية الاسائيلية</option>
+		<option value='اتفاقيات القانون الدولي الانساني' data-tag='6'>اتفاقيات القانون الدولي الانساني</option>
+		<option value='اجراءات' data-tag='7'>اجراءات</option>
+		<option value='اخطارات' data-tag='7'>اخطارات</option>
+		<option value='السندات' data-tag='7'>السندات</option>
+		<option value='شركات' data-tag='7'>شركات</option>
+		<option value='طلبات' data-tag='7'>طلبات</option>
+		<option value='عقود' data-tag='7'>عقود</option>
+		<option value='لوائح الاستئناف' data-tag='7'>لوائح الاستئناف</option>
+		<option value='مجلد الجزاء' data-tag='7'>مجلد الجزاء</option>
+		<option value='مجلد النماذج الشرعية' data-tag='7'>مجلد النماذج الشرعية</option>
+		<option value='عربي لانجليزي' data-tag='8'>عربي لانجليزي</option>
+		<option value='انجليزي لعربي' data-tag='8'>انجليزي لعربي</option>
+		<option value='محامين متدربين' data-tag='9'> محامين متدربين</option>
+		<option value='طلبة حقوق' data-tag='9'>طلبة حقوق</option>
+		
+	</select>
+
+		</div>
+
+		<div class=" mb-3">
+		<div class="file-drop-area">
+		<span class="fake-btn"><i class="fas fa-file"></i></span>
+		<span class="file-msg">اضف ملف </span>
+		<input class="file-input" type="file" name="filePDF" multiple>
+		</div>
+		</div>
+		
+		
+		<div class="form-check my-2">
+		<input class="form-check-input" type="checkbox" value="" id="defaultCheck7">
+		<label class="form-check-label mx-3" for="defaultCheck1">
+		ملف مدفوع   </label>
+		</div>
+		<input type="text" value="" data-role="tagsinput" id="tags" class="form-control col-md-8">
+
+		<button type="button" class="mr-5  mt-5 col-2 btn btn-outline-secondary ">اضف</button>
+		</div>
+		</div>
+		<div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+		<p>لا يوجد اي عناوين  ...</p>
+		</div>
+		<div class="tab-pane fade" id="v-pills-blog" role="tabpanel" aria-labelledby="v-pills-blog-tab">
+
+		<a  class="" style="display: inherit; text-align: center;"  data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
+		<i class="fas fa-plus"></i>
+		<span style="   display: block;">اضافة محتوى </span>
+		</a>
+
+		<div class="px-3 collapse m-4 container"  id="collapseExample1">
+		<form>
+		<div class="form-row">
+		<div class="form-group col-md-12 px-3">
+
+		<label for="writerName">اسم الكاتب</label>
+		<div>
+		<input type="text" class="form-control" id="writerName" placeholder="">
+		</div>
+		</div>
+		<div class=" mb-3">
+		<div class="file-drop-area">
+		<span class="fake-btn"><i class="fas fa-camera fa-2x"></i></span>
+		<span class="file-msg">اضف صورة</span>
+		<input class="file-input" type="file"  name="" multiple>
+		</div>
+		</div>
+		</div>
+		<div id="summernote" ></div>
+		<script>
+		$(document).ready(function() {
+		$('#summernote').summernote();
+		});
+
+		</script>
+
+		<button type="submit" class="btn btn-primary mt-5">اضف</button>
+		</form>
+
+		</div>
+
+		</div>
+		<div style="   color: gray;"class="tab-pane fade" id="v-pills-settings1" role="tabpanel" aria-labelledby="v-pills-settings-tab1">
+		<form>
+		<div class="form-row">
+		<div class="form-group col-md-6">
+		<label for="firstName">الاسم الاول </label>
+		<input type="text" id="firstName"class="form-control" placeholder="">
+
+		</div>
+		<div class="form-group col-md-6">
+		<label for="lastName">الاسم الاخير </label>
+		<input type="text" id="lastName"class="form-control" placeholder="">
+		</div>
+		<small id="passwordHelpBlock0" class="form-text text-muted">
+		سيكون هذا الامر بخصوص الكيفية التي سيعرض بها اسمك في قسم الحساب وفي المرجعات 
+		</small>
+		</div>
+
+
+		<div class="form-group mt-3">
+		<label for="formGroupExampleInput">اسم العرض</label>
+		<input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+		</div>
+		<div class="form-group ">
+		<label for="inputEmail4">البريد الالكتروني </label>
+		<input type="email" class="form-control" id="inputEmail4" placeholder="">
+		</div>
+		<p>تغيير كلمة المرور</p>
+		<label for="inputPassword5">كلمة المرور الحالية</label>
+		<input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+		<small id="passwordHelpBlock" class="form-text text-muted">
+		(اترك الحقل فارغا اذا كنت لا تود تغييرها )
+		</small>
+		<label for="inputPassword5">كلمة المرور الجديدة</label>
+		<input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpBlock">
+		<small id="passwordHelpBlock2" class="form-text text-muted">
+		(اترك الحقل فارغا اذا كنت لا تود تغييرها )
+		</small>
+		<label for="inputPassword5">تأكيد كلمة المرور</label>
+		<input type="password" id="inputPassword7" class="form-control" aria-describedby="passwordHelpBlock">
+		<div class="mt-5">
+		<button type="submit" class="btn btn-primary" style="color:white;background-color:#37798F">حفظ التغييرات </button>
+		</div>
+		</form>
+		</div>
+		<div class="tab-pane fade" id="v-pills-settings2" role="tabpanel" aria-labelledby="v-pills-settings-tab2">..6.</div>
+	</div>
+	</div>
+	</div>
+</div>
+
+ 
+<script src="jquery.js"></script>
+<script>
+	var i=0;
+	$.get('https://jsonplaceholder.typicode.com/todos', function(data) {
+	for(let i in data.slice(0,12)) {
+	li = $('<li  style="display: flex;" class="my-3" >');
+	li.attr('id', data[i].id);
+	div=$('<div class="col-md-8">');
+	div.text(data[i].title);	
+	div0=$('<div class="form-check form-check-inline col-md-2">');
+	inp=$('<input class="form-check-input" type="radio"  value="lawyer">');
+	var in0="inlineRadioOptions";
+	inp.attr('name',in0);
+	var t="lawyer"+data[i].id;
+	inp.attr('id',t);
+	div0.append(inp);
+	div1=$('<div class="form-check form-check-inline col-md-2">');
+	inp1=$('<input class="form-check-input" type="radio"  value="Consultant">');
+	var in1="inlineRadioOptions";
+	inp1.attr('name',in1);
+	var t1="Consultant"+data[i].id;
+	inp1.attr('id',t1);
+	div1.append(inp1);
+	li.append(div);
+	li.append(div0);
+	li.append(div1);
+	$('#list').append(li);
+
+		}
+	});
+
+	var z=0;
+	$.get('https://jsonplaceholder.typicode.com/todos',function(data) {
+	for(let z in data.slice(0,12)) {
+	li = $('<li  style="display: flex;" class="li" >');
+	li.attr('id', data[z].id);
+	div=$('<div class="col-md-8">');
+	div.text(data[z].title);	
+	div0=$('<div class="form-check form-check-inline col-md-2">');
+	lab=$('<label class="form-check-label" for="inlineRadio1">');
+	lab.text(data[z].completed);
+	div0.append(lab);
+	div1=$('<div class="form-check form-check-inline col-md-2">');
+	a=$('<a href="#" onClick="removeItem(item, i)" class="text-danger remove">');
+	a.text('X');
+	div1.append(a);
+	li.append(div);
+	li.append(div0);
+	li.append(div1);
+	$('#list1').append(li);
+
+		}
+	});
+
+	$(document).on("click", ".remove", function() {
+	$(this).closest('.li').remove(); 
+	});
+</script>
+<script>
+	$(document).ready(function() {
+
+	$('#exampleFormControlSelect1').on('change', function() {
+	var selected = $(this).val();
+	$("#exampleFormControlSelect2 option").each(function(item){
+	console.log(selected) ;  
+	var element =  $(this) ; 
+	console.log(element.data("tag")) ; 
+	if (element.data("tag") != selected){
+		element.hide() ; 
+	}else{
+		element.show();
+	}
+	}) ; 
+
+	$("#exampleFormControlSelect2").val($("#exampleFormControlSelect2 option:visible:first").val());
+	});
+	});
+</script>  
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> 
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script> 
+<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.min.js" integrity="sha256-tQ3x4V2JW+L0ew/P3v2xzL46XDjEWUExFkCDY0Rflqc=" crossorigin="anonymous"></script>	
+
+</body>
+</html>

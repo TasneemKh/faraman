@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+  
+      <meta charset="utf-8">
+	  <link rel="stylesheet" type="text/css" href="lawCss.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title> فرمان </title>
+	  <link href="css/custom.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+ <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+       <style>
+	   
+body{    text-align: right;}
+.footerBg {
+    background-color: #37798F;
+}
+.mainTit{position: absolute;
+  right: 14%;
+    bottom: 43%;
+    left: 0;
+    z-index: 10;
+    text-align:right;
+	 padding-top: 0px; 
+     padding-bottom: 0px; 
+    color: #37798F;
+
+}
+legend{color:#37798F}
+.carousel-caption.d-none.d-md-block.textImg.p-3{  top: 400px;   bottom: 0px;   height: 62px;     width: 432px;
+    right: 100px;}
+	@media only screen and (min-width: 768px)  and (max-width: 920px)  {
+	#svg{top: 60%;}
+	}
+	@media only screen and (max-width: 1200px) and (min-width: 990px) {
+#c {
+    font-size: x-small !important;
+}
+.rating {
+   
+    bottom: 43%}
+}
+@media only screen and (max-width:1000px) and (min-width: 921px) {
+#svg{top: 67%;}}
+@media only screen and (max-width:1100px) and (min-width: 1001px) {
+#svg{top: 83%;}}
+@media (min-width: 1101px) {
+#svg{top: 90%;}}
+@media only screen and (max-width: 1000px) and (min-width: 600px) {
+.rating {
+   
+    bottom: 53%}
+}
+@media only screen and (max-width:770px) {
+h5.card-title {
+    font-size: .8rem !important;
+}
+}
+
+@media only screen and (min-width: 768px) {
+div[id^="card"]{
+      flex: 1 0 33.33% important;
+  }
+}
+@media  only screen and (min-width: 576px) {
+div[id^="card"]{
+       flex: 1 0 100% important;
+  }
+}
+@media  only screen and (min-width: 992px) {
+div[id^="card"] {
+       flex: 1 0 20% !important;
+  }
+}
+.linkTxt{ display: block;
+    color: black;
+    font-weight: 500;
+    line-height: 1.2;}
+	
+	.dropdown-submenu {
+  position: relative;
+}
+
+
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-left: .1rem;
+  margin-right: .1rem;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #37798F;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+      background: #37798f;
+    color: white;
+}
+	.xxWidth{       min-width: 160px;
+    max-width: 234px;
+}
+.Svgu{ position: absolute;     right: 48%;
+    top: 60%;  z-index: 10;}
+  </style>
+  </head>
+   <script>
+  
+  $(document).ready(function(){
+    $(".seeMore").click(function(){
+       this.style = "display:none";
+    });
+});
+  function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+
+   </script>
+	<body>
+
+	<div id="mybutton"  >
+<button class="feedback open-button"onclick="openForm()" style="
+    width: 184px;
+"><i class="fas fa-comment-dots"></i><span class="m-auto"> الدردشة</span></button>
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+   <h1 style="display: inline-block;    font-size: 1.5rem;">مرحبا <i class="fas fa-hand-paper" style="color: #e8dfad;"></i></h1>
+    <button type="button" class=" cancel" onclick="closeForm()"style="    float: left;">X</button>
+   
+<label for="msg" style=" display: block;" class="p-4"><b>ان كنتم بحاجة الى أي مساعدة نحن  متواجدين لخدمتكم</b></label>
+
+<div class="row mt-5">
+    <button type="submit" class="btn btnNew mx-1"><i class="fas fa-location-arrow"></i></button>
+      <textarea placeholder="أدخل رسالتك.." name="msg" required></textarea>
+</div>
+  </form>
+</div>
+
+</div>
+
+	
+<header style="      position: sticky;   top: 0;    width: 100%;   z-index: 100; ">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light" style="        top: 0;    width: 100%;    border-bottom: 1px solid #cccccc40;">
+	<div class="container">
+	<a class="navbar-brand" href="law.html"><img src="img/Group 399.png" style="    width: 100px;"> </a>
+	
+
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+	  <span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse navbarsExample07" id="">
+	<form class="example mr-4" action="">
+  <input type="text" class="" placeholder="بحث" id="search"name="search">
+  <button type="button"><i class="fa fa-search"></i></button>
+</form>
+
+
+	  <ul class="navbar-nav NavItem mr-auto">
+	  <li class="nav-item ">
+		  <a class="nav-link unchecked" href="#" style="font-weight: 900;">المدونة <span class="sr-only">(current)</span></a>
+		</li>
+		<li class="nav-item ">
+		  <a class="nav-link unchecked" href="law.html" style="font-weight: 900;">الرئيسة <span class="sr-only">(current)</span></a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link unchecked" href="#" style="font-weight: 900;" data-toggle="modal" data-target="#exampleModal">اتصل بنا </a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link unchecked" href="logInSmartLow.html" style="font-weight: 900;">تسجيل الدخول </a>
+		</li>			
+	  </ul>
+	   <form class="form-inline">
+		<button class="btn btn-new" type="button"><i class="fas fa-user-plus pl-1"></i>ابدأ هنا</button>
+	  </form>
+	</div>
+	</div>
+	</nav>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light p-0"style="    position: sticky;   top: 57px;  width: 100%;  ">
+	<div class="container px-4">
+	<div class="row">
+
+	<div class="collapse navbar-collapse navbarsExample07" id="">
+	<ul class="navbar-nav "id="c" style="font-size: small;     padding-right: 0px;">
+
+	<li class="nav-item dropdown ">
+	<a class="nav-link dropdown-toggle itemNavLink" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"style="   font-weight: bolder;">
+	القوانين 
+	</a>
+	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="    min-width: 19rem;">
+	<a class="dropdown-item" href="#">القوانين القديمة المطبقة في فلسطين</a>
+	<a class="dropdown-item" href="#">القوانين التي صدرت من 1994-2006</a>
+	<a class="dropdown-item" href="#">القوانين التي صدرت من 2006-2019 غزة</a>
+	<a class="dropdown-item" href="#">المراسيم والقرارات من عام 2006-2019ضفةغربية</a>
+	
+	</div>
+	</li>
+	<li class="nav-item dropdown mega-dropdown">
+	<a class="nav-link dropdown-toggle itemNavLink" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="   font-weight: bolder;">
+	السوابق القضائية
+	</a>
+		<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        
+      <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">زمني </a>
+                <ul class="dropdown-menu" style="right:9.7rem">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                </ul>
+              </li>
+          <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">نوعي</a>
+            <ul class="dropdown-menu" style="right:9.7rem">
+              <li><a class="dropdown-item" href="#">Action </a></li>
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Action</a></li>
+            </ul>
+	</li>	
+	</ul>
+	
+	</li>
+	<li class="nav-item dropdown">
+	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="   font-weight: bolder;">
+	قوانين عربية
+	</a>
+	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="    font-size: smaller;   min-width: 12rem;">
+	<a class="dropdown-item" href="#">القانون التونسي</a>
+	<a class="dropdown-item" href="#">القانون العراقي</a>
+	<a class="dropdown-item" href="#">المدني الجزائري</a>
+	
+	<a class="dropdown-item" href="#">قانون  الاماراتي</a>
+	
+	<a class="dropdown-item" href="#">قانون المصري</a>
+	</div>
+	</li>
+	<li class="nav-item dropdown">
+	<a class="nav-link dropdown-toggle itemNavLink" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="   font-weight: bolder;">
+مذكرات قانونية 
+	</a>
+	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="  font-size: smaller;   min-width: min-content;">
+	<a class="dropdown-item" href="#">حمدي خليفة</a>
+	<a class="dropdown-item" href="#">أحمد علي ابوسماقة,جهاد سالم الشرفات</a>
+	
+	</div>
+	</li>
+	<li class="nav-item dropdown">
+	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="   font-weight: bolder;">
+مكتبة قانونية	</a>
+	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	<a class="dropdown-item" href="#">رسائل ماجستير ودكتوراه</a>
+	<a class="dropdown-item" href="#">بحوث قانونية</a>
+	<a class="dropdown-item" href="#">سنهوري</a>
+	<a class="dropdown-item" href="#">كتب قانونية</a>
+	</div>
+	</li>
+	<li class="nav-item dropdown">
+	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="   font-weight: bolder;">
+معاهدات واتفاقيات  	</a>
+	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="  font-size: smaller;   min-width: min-content;">
+	<a class="dropdown-item" href="#">قرارات الجمعية العامة ومجلس الامن لقضية الفلسطينية  </a>
+	<a class="dropdown-item" href="#">القدس في اهم القرارات الدولية</a>
+	<a class="dropdown-item" href="#">الاتفاقيات والمواثيق والمذكرات والنصوص المتعلقة بالقضية الفلسطينية</a>
+	<a class="dropdown-item" href="#">الاتفاقيات الفلسطينية الاسرائيلية</a>
+	<a class="dropdown-item" href="#">اتفاقيات جامعة الدول العربية والاتفاقيات العربية</a>
+	<a class="dropdown-item" href="#">اتفاقيات منظمة المؤتمر الاسلامي </a>
+	<a class="dropdown-item" href="#">المواثيق العربية</a>
+	<a class="dropdown-item" href="#">الاتفاقيات العربية الاسائيلية</a>
+	<a class="dropdown-item" href="#">اتفاقيات القانون الدولي الانساني</a>
+	
+	<a class="dropdown-item" href="#">مواثيق المنظمات الدولية والعربية</a>
+	<a class="dropdown-item" href="#">الاتفاقيات و المعاهدات والبروتوكولات والاعلانات المتعلقة بحقوق الانسان</a>
+	<a class="dropdown-item" href="#">اتفاقيات ومعاهدات حقوق الملكية الفكرية</a>
+	<a class="dropdown-item" href="#">اتفاقيات منظمة العمل الدولية</a>
+	<a class="dropdown-item" href="#">الوثائق الاوروبية المتعلقة بحقوق الانسان</a>
+	<a class="dropdown-item" href="#">الوثائق الامريكية المتعلقة بحقوق الانسان</a>
+	
+	<a class="dropdown-item" href="#">الوثائق الافريقية المتعلقة بحقوق الانسان</a>
+	<a class="dropdown-item" href="#">الوثائق الاسلامية</a>
+	<a class="dropdown-item" href="#">الاتفاقيات المتعلقة بالبيئة</a>
+	<a class="dropdown-item" href="#">اتفاقيات الامم المتحدة</a>
+	<a class="dropdown-item" href="#">اتفاقيات بين مصر ومنظمة التحرير الفلسطينية</a>
+
+	</div>
+	</li>
+	
+	<li class="nav-item dropdown">
+	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="   font-weight: bolder;">
+	نماذج  عقود ودعاوي 
+
+	</a>
+	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="   min-width: 12rem;">
+	<a class="dropdown-item" href="#">اجراءات </a>
+	<a class="dropdown-item" href="#">اخطارات</a>
+	<a class="dropdown-item" href="#">السندات</a>
+	<a class="dropdown-item" href="#">شركات</a>
+	<a class="dropdown-item" href="#">طلبات</a>
+	<a class="dropdown-item" href="#">عقود</a>
+	<a class="dropdown-item" href="#">لوائح الاستئناف</a>
+	<a class="dropdown-item" href="#">مجلد الجزاء</a>
+	<a class="dropdown-item" href="#">مجلد النماذج الشرعية</a>
+	<a class="dropdown-item" href="#">نماذج عقود وسندات جديدة</a>
+	<a class="dropdown-item" href="#">نماذج ولوائح ودعاوي </a>
+	<a class="dropdown-item" href="#">انظمة </a>
+	<a class="dropdown-item" href="#">لوائح تنفيذية</a>
+	</div>
+	
+	</li>
+	<li class="nav-item dropdown">
+	<a class="nav-link dropdown-toggle itemNavLink" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"style="   font-weight: bolder;">
+معجم القانوني
+	</a>
+	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="  font-size: smaller;   min-width: min-content;">
+	<a class="dropdown-item" href="#">عربي لانجليزي</a>
+	<a class="dropdown-item" href="#">انجليزي لعربي</a>
+	
+	</div>
+	</li>
+	<li class="nav-item dropdown">
+	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="   font-weight: bolder;">
+	نماذج واسئلة
+	</a>
+	<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        
+      <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">محامين متدربين </a>
+                <ul class="dropdown-menu" style="right:9.7rem">
+                  <li><a class="dropdown-item" href="#">امتحانات المزاولة</a></li>
+                  
+                </ul>
+              </li>
+          <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">طلبة حقوق </a>
+            <ul class="dropdown-menu" style="right:9.7rem">
+              <li><a class="dropdown-item" href="#">طلبة جامعة الازهر </a></li>
+              <li><a class="dropdown-item" href="#">طلبة جامعة الامة</a></li>
+              <li><a class="dropdown-item" href="#">طلبة جامعة الاسراء </a></li>
+            </ul>
+	</li>	
+	</ul>
+	<script>$('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+  if (!$(this).next().hasClass('show')) {
+    $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+  }
+  var $subMenu = $(this).next(".dropdown-menu");
+  $subMenu.toggleClass('show');
+
+
+  $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+    $('.dropdown-submenu .show').removeClass("show");
+  });
+
+
+  return false;
+});</script>
+	</li>
+	
+	<li class="nav-item dropdown mr-3">
+	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	<i class="fas fa-globe"></i>
+	</a>
+	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="right: -150px;">
+	<a class="dropdown-item" href="#" onClick="rtl()">AR</a>
+	<a class="dropdown-item" href="#"  onClick="ltr()">EN </a>
+
+	</div>
+	<script>
+	function rtl(){
+document.body.style.direction = "rtl";
+$(".mainTit").css("right","14%");
+$("html").children().css("text-align","right");
+$(".NavItem").addClass("mr-auto");
+	}
+	function ltr(){
+document.body.style.direction = "ltr";
+$("html").children().css("text-align","left");
+$(".mainTit").css("right","60%");
+$(".NavItem").removeClass("mr-auto");
+$(".NavItem").addClass("ml-auto");
+
+	}
+	</script>
+	</li>
+
+	</ul>
+
+	</div>
+
+	</div>
+	</div>
+	</nav>
+	
+</header>
+	<div>
+	<img src="img/mainImg.png" class="img-fluid" alt="Responsive image" style="object-fit: contain;">
+	<div class="carousel-caption d-none d-md-block mainTit">
+	<h1 class="" Style="font-size:4.5rem">القوانين  </h1><br>
+	<p>الآن مع فرمان أصبح بإمكانكم الوصول الى كافةالمعلومات القانونية بكل سهولة و بأقل وقت  </p>
+	</div>
+<a href="#AboutUs">
+	<svg id="svg" style="animation: bounce 0.5s;animation-direction: alternate;animation-iteration-count: infinite;" class="d-md-block d-none Svgu bounce " xmlns="http://www.w3.org/2000/svg" width="41" height="70" viewBox="0 0 41 64">
+	<g id="Group_209" data-name="Group 209" transform="translate(-940 -998)">
+	<g id="Rectangle_1483" data-name="Rectangle 1483" transform="translate(940 998)" fill="none" stroke="#ffffff" stroke-width="3">
+	<rect width="41" height="64" rx="20.5" stroke="none"/>
+	<rect x="1.5" y="1.5" width="38" height="61" rx="19" fill="none"/>
+	</g>
+	<circle id="Ellipse_71" data-name="Ellipse 71" cx="7.5" cy="7.5" r="7.5" transform="translate(953 1037)" fill="#ffffff"/>
+	</g>
+	</svg>
+</a>
+	</div>
+
+	<main  >
+	<section class="container mt-5 "id="AboutUs">
+	<fieldset class="borderfieldset  p-2  mt-2" >
+	<legend  class="w-auto animated  zoomInUp v"style="text-align: center;">  من نحن  </legend>
+	<div class="row p-5" >
+	<div class="col-md-6 col-xs-12 ">
+	<div>هو موقع و تطبيق قانونى على الهواتف الذكية يتيح للمستخدمين من المحامين وطلاب الحقوق والباحثين و القانونين ومنفذى القانون للاطلاع والوصول للمعلومة القانونية بشكل أسهل من خلال توفير النصوص القانونية كاملة 
+
+	<div class="collapse" id="collapseExample">
+	<div class="">
+	وتوفير إمكانية البحث بطريقة سهلة وسريعة، بالإضافة إلى توفير نصوص قانونية مثل السوابق القضائية ونماذج القضايا والعقود بشكل مستمر على التطبيق بالاضافة انه تفاعلى منصة حوارية لمواضيع شائكة للنقاش وكذللك استشارات وتشبيك للافراد وايضا اصحاب الشركات عن طريق الرد على استفسارتهم بوجود مجموعة من المحامين المتخصصين
+	</div>
+	</div>
+	<a class="seeMore newCol " data-toggle="collapse" href="#collapseExample" onClick="funMore"role="button" aria-expanded="false" aria-controls="collapseExample" style="display:inline-block;color: #F8B40E !important;
+    font-family: serif;
+    font-style: oblique;
+    font-weight: bolder;">
+	 <span>&#187;</span>
+	المزيد
+	</a>
+	</div>
+	</div>
+	<div class="col-md-6 col-xs-12  " style="   text-align: center;    background-color: #37798F;">
+	<img src="img/Framan.png" style="      width: 50%;
+    padding-top: 20%;
+    padding-bottom: 20%;"></div>
+	</div>
+	</fieldset>
+	</section>
+	<section class="container ">
+	<fieldset class="borderfieldset  p-2  mt-2">
+	<legend  class="w-auto " style="text-align: center;"> خدمات قانونية   </legend>
+	<div class="row">
+	<div class="col-sm-12">
+	<a class="seeMore leftSid"  href="#" role="button" aria-expanded="false"style="color:#37798F">
+	 <span>&#187;</span>
+	المزيد
+	</a>
+	</div>
+	</div>
+	<div class="d-flex justify-content-between mt-3 mb-5 animated v  bounceInRight">
+	<div class="card-deck pr-5 pl-5">
+	<div id="card1" class="card br b" style="    min-width: 120px;"><!--<span class="badge badge-light"> التشريعات القانونية </span>-->
+	<!-- <img class="card-img-top" src="hummer.jpeg" alt="Card image cap">-->
+	 <img src="img/gdpr.png" class=".d-block mx-auto " style="width: 150px;height: 100px;">
+	
+	<div class="card-body text-center">
+	<a class="card-title linkTxt" href="#" style="">القوانين </a>
+	<small class="card-text">نستجيب بصورة سريعة إلى ألوان إشارات التفاصيل</small>
+	</div>
+	</div>
+	<div id="card2" class="card br b" style="    min-width: 120px;">
+	<!--  <img class="card-img-top" src="hummer.jpeg" alt="Card image cap">  -->
+	 <img src="img/Group 593.png" class=".d-block mx-auto " style="width: 130px;height: 100px;">
+	<div class="card-body text-center ">
+		<a class="card-title linkTxt" href="#" style="">سوابق قضائية </a>
+	<small class="card-text">نستجيب بصورة سريعة إلى ألوان إشارات التفاصيل</small>
+
+	</div>
+	</div>
+	<div id="card3" class="card br b" style="    min-width: 120px;">
+		 <img src="img/Group 592.png" class=".d-block mx-auto " style="width: 150px;height: 100px;">
+	<div class="card-body text-center">
+		<a class="card-title linkTxt" href="#" style="">اتفاقيات ومعاهدات قانونية</a>
+	<small class="card-text">نستجيب بصورة سريعة إلى ألوان إشارات التفاصيل</small>	  
+	</div>
+	</div>
+	<div id="card4" class="card br b" style="    min-width: 120px;">
+	 <img src="img/Group 591.png" class=".d-block mx-auto " style="width: 130px;height: 100px;">
+
+	<div class="card-body text-center">
+<a class="card-title linkTxt" href="#" style="">قوانين عربية </a>
+	<small class="card-text">نستجيب بصورة سريعة إلى ألوان إشارات التفاصيل</small>
+	</div>
+	</div>
+	
+	<div id="card6" class="card br b mt-3" style="    min-width: 120px;">
+	 <img src="img/Group 586.png" class=".d-block mx-auto " style="width: 130px;height: 100px;">
+	<div class="card-body text-center ">
+	<a class="card-title linkTxt" href="#" style="">مذكرات قانونية </a>
+	<small class="card-text">نستجيب بصورة سريعة إلى ألوان إشارات التفاصيل</small>
+
+	</div>
+	</div>
+	<div id="card7" class="card br b mt-3" style="    min-width: 120px;">
+	<img src="img/Group 585.png" class=".d-block mx-auto " style="width: 150px;height: 100px;">
+	<div class="card-body text-center">
+<a class="card-title linkTxt" href="#" style="">نماذج عقود ودعاوي</a>
+	<small class="card-text">نستجيب بصورة سريعة إلى ألوان إشارات التفاصيل</small>	  
+	</div>
+	</div>
+	<div id="card8" class="card br b mt-3" style="    min-width: 120px;">
+	 <img src="img/Group 584.png" class=".d-block mx-auto " style="width: 130px;height: 100px;">
+
+	<div class="card-body text-center">
+	<a class="card-title linkTxt" href="#" style=""> معجم قانوني  </a>
+	<small class="card-text">نستجيب بصورة سريعة إلى ألوان إشارات التفاصيل</small>
+	</div>
+	</div>
+	<div id="card15" class="card br b mt-3" style="    min-width: 120px;"><!--<span class="badge badge-light">مجلات قانونية </span>-->
+	<img src="img/Group 583.png" class=".d-block mx-auto " style="width: 150px;height: 100px;">
+
+	<div class="card-body text-center">
+	<a class="card-title linkTxt" href="#" style="">أسئلة واجابات</a>
+	<small class="card-text">نستجيب بصورة سريعة إلى ألوان إشارات التفاصيل</small>
+	</div>
+	</div>
+	</div>
+	</div>
+	<div class="row mt-3 mb-5 animated   v bounceInLeft" >
+	<div class="card-deck pr-5 pl-5">
+	</div>
+	</div>
+	</fieldset>
+	</section>
+	<section class="container ">
+	<fieldset class="borderfieldset  p-2  mt-2">
+	<legend  class="w-auto " style="text-align: center;">  المستشارين     </legend>
+	<div class="row">
+	<div class="col-sm-12">
+	<a class="seeMore leftSid"  href="#" role="button" aria-expanded="false"style="color:#37798F">
+	 <span>&#187;</span>
+	المزيد
+	</a>
+	</div>
+	</div>
+	<div class="row mt-3 mb-5 animated  zoomInUp" >
+	<div class="card-deck pr-5 pl-5 mx-auto">
+	<div class="card br xxWidth">
+	<img class="card-img-top" src="img/img1.png" alt="Card image cap">
+	<div class="rating d-flex flex-nowrap">
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star unchecked flex-fill"></span>
+	<span class="fa fa-star unchecked flex-fill"></span>
+	</div>
+	<div class="card-body text-center">
+<a class="card-title linkTxt" href="#" style="">أ.احمد النصري</a>
+	<p class="card-text">ماجستير</p>
+	</div>
+	</div>
+	<div class="card br xxWidth">
+	<img class="card-img-top" src="img/img2.png" alt="Card image cap">
+	<div class="rating d-flex flex-nowrap">
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star unchecked flex-fill"></span>
+	</div>
+	<div class="card-body text-center ">
+	<a class="card-title linkTxt" href="#" style="">أ.اسامة حمدان</a>
+	<p class="card-text">بكالوريس</p>
+
+	</div>
+	</div>
+	<div class="card br xxWidth">
+	<img class="card-img-top" src="img/img3.png" alt="Card image cap">
+	<div class="rating d-flex flex-nowrap">
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star unchecked flex-fill"></span>
+	<span class="fa fa-star unchecked flex-fill"></span>
+	<span class="fa fa-star unchecked flex-fill"></span>
+	</div>
+	<div class="card-body text-center">
+<a class="card-title linkTxt" href="#" style="">أ.حنين عياد</a>
+	<p class="card-text">بكالوريس</p>	  
+	</div>
+	</div>
+	<div class="card br xxWidth">
+	<img class="card-img-top" src="img/img4.png" alt="Card image cap">
+	<div class="rating d-flex flex-nowrap">
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	</div>
+	<div class="card-body text-center">
+<a class="card-title linkTxt" href="#" style="">أ.محمد النصري</a>
+	<p class="card-text">دكتوراه</p>
+	</div>
+	</div>
+	</div>
+	</div>
+	</fieldset>
+	</section>
+	<section class="container ">
+	<fieldset class="borderfieldset  p-2  mt-2">
+	<legend  class="w-auto " style="text-align: center;">  المحامين    </legend>
+	<div class="row">
+	<div class="col-sm-12">
+	<a class="seeMore leftSid"  href="#" role="button" aria-expanded="false"style="color:#37798F">
+	 <span>&#187;</span>
+	المزيد
+	</a>
+	</div>
+	</div>
+	<div class="row mt-3 mb-5 animated  zoomInUp" >
+	<div class="card-deck pr-5 pl-5 mx-auto">
+	<div class="card br xxWidth">
+	<img class="card-img-top" src="img/img1.png" alt="Card image cap">
+	<div class="rating d-flex flex-nowrap">
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star unchecked flex-fill"></span>
+	<span class="fa fa-star unchecked flex-fill"></span>
+	</div>
+	<div class="card-body text-center">
+<a class="card-title linkTxt" href="#" style="">أ.احمد النصري</a>
+	<p class="card-text">ماجستير</p>
+	</div>
+	</div>
+	<div class="card br xxWidth">
+	<img class="card-img-top" src="img/img2.png" alt="Card image cap">
+	<div class="rating d-flex flex-nowrap">
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star unchecked flex-fill"></span>
+	</div>
+	<div class="card-body text-center ">
+	<a class="card-title linkTxt" href="#" style="">أ.اسامة حمدان</a>
+	<p class="card-text">بكالوريس</p>
+
+	</div>
+	</div>
+	<div class="card br xxWidth">
+	<img class="card-img-top" src="img/img3.png" alt="Card image cap">
+	<div class="rating d-flex flex-nowrap">
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star unchecked flex-fill"></span>
+	<span class="fa fa-star unchecked flex-fill"></span>
+	<span class="fa fa-star unchecked flex-fill"></span>
+	</div>
+	<div class="card-body text-center">
+<a class="card-title linkTxt" href="#" style="">أ.حنين عياد</a>
+	<p class="card-text">بكالوريس</p>	  
+	</div>
+	</div>
+	<div class="card br xxWidth">
+	<img class="card-img-top" src="img/img4.png" alt="Card image cap">
+	<div class="rating d-flex flex-nowrap">
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	<span class="fa fa-star checked flex-fill"></span>
+	</div>
+	<div class="card-body text-center">
+<a class="card-title linkTxt" href="#" style="">أ.محمد النصري</a>
+	<p class="card-text">دكتوراه</p>
+	</div>
+	</div>
+	</div>
+	</div>
+	</fieldset>
+	</section>
+	<section class="container ">
+	<fieldset class="borderfieldset  p-2  mt-2">
+	<legend  class="w-auto " style="text-align: center;">  اضيف مقترح    </legend>
+	<div class="row my-3 px-3 "  style="visibility: visible; " >
+	
+	<div class="col-md-8 col-sm-12 text-center m-auto" style="
+    color: #37798f;
+    font-weight: 500;
+">
+
+	<form class="mt-3 pl-5">
+	<div class="form-group">
+	<label for="exampleInputName">الاسم</label>
+	<input type="text" class="form-control radiusInput" id="exampleInputName"  style="    background-color: #F2F2F2;">
+	</div>
+	<div class="form-group">
+	<label for="exampleInputEmail1">البريد الالكتروني  </label>
+	<input type="email" class="form-control radiusInput" id="exampleInputEmail1" aria-describedby="emailHelp" style="    background-color: #F2F2F2;">
+	</div>
+	<div class="form-group " >
+  <label for="exampleFormControlTextarea6">اضف مقترحك</label>
+  <textarea class="form-control z-depth-1 roundedBorder" id="exampleFormControlTextarea6" rows="4" style="    background-color: #F2F2F2;"></textarea>
+</div>
+
+	<button type="submit" class="btn footerBg radiusInput" style="width: 76px;color: white;font-weight: bold;" >ارسال</button>
+	</form>
+	</div>
+	
+	</div>
+	</fieldset>
+	</section>
+	<section class="container mt-5 mb-5" id="othdiv" id="scroll-to">
+	<fieldset class="borderfieldset  p-2  mt-2">
+	<legend  class="w-auto " style="text-align: center;">  الشركاء/الداعمين  </legend>
+	<div id="exampleSlider">
+       <div class="MS-content">
+           <div class="item">
+            <div class="px-2 ">
+	  <img src="img/حاضنة الأعمال والتكنولوجيا.png" class="d-block w-100" alt="...">
+	  <h3 class="mt-3 text-center comp">حاضنة الأعمال والتكنولوجيا</h3>
+	  </div>
+           </div>
+           <div class="item">
+             <div class="px-2">
+	  <img src="img/56408188397bf.png" class="d-block w-100" alt="...">
+	  <h3 class="mt-3 text-center comp">المجلس الأعلى للقضاء </h3>
+	  </div>
+           </div>
+           <div class="item">
+           <div class="px-2">
+	  <img src="img/picti-startups.png" class="d-block w-100" alt="...">
+	  <h3 class="mt-3 text-center comp">حاضنة بيكتي </h3>
+	  </div>
+           </div>
+           <div class="item">
+          <div class=" px-2">
+	  <img src="img/Flag_of_Europe.png" class="d-block w-100" alt="...">
+	  <h3 class="mt-3 text-center comp">الاتحاد الاوروبي</h3>
+	  </div>
+           </div>
+            <div class="item">
+            <div class="px-2 ">
+	  <img src="img/حاضنة الأعمال والتكنولوجيا.png" class="d-block w-100" alt="...">
+	  <h3 class="mt-3 text-center comp">حاضنة الأعمال والتكنولوجيا</h3>
+	  </div>
+           </div>
+           <div class="item">
+             <div class="px-2">
+	  <img src="img/56408188397bf.png" class="d-block w-100" alt="...">
+	  <h3 class="mt-3 text-center comp">المجلس الأعلى للقضاء </h3>
+	  </div>
+           </div>
+           <div class="item">
+           <div class="px-2">
+	  <img src="img/picti-startups.png" class="d-block w-100" alt="...">
+	  <h3 class="mt-3 text-center comp">حاضنة بيكتي </h3>
+	  </div>
+           </div>
+           <div class="item">
+          <div class=" px-2">
+	  <img src="img/Flag_of_Europe.png" class="d-block w-100" alt="...">
+	  <h3 class="mt-3 text-center comp">الاتحاد الاوروبي</h3>
+	  </div>
+           </div>
+		    <div class="item">
+            <div class="px-2 ">
+	  <img src="img/حاضنة الأعمال والتكنولوجيا.png" class="d-block w-100" alt="...">
+	  <h3 class="mt-3 text-center comp">حاضنة الأعمال والتكنولوجيا</h3>
+	  </div>
+           </div>
+           <div class="item">
+             <div class="px-2">
+	  <img src="img/56408188397bf.png" class="d-block w-100" alt="...">
+	  <h3 class="mt-3 text-center comp">المجلس الأعلى للقضاء </h3>
+	  </div>
+           </div>
+           <div class="item">
+           <div class="px-2">
+	  <img src="img/picti-startups.png" class="d-block w-100" alt="...">
+	  <h3 class="mt-3 text-center comp">حاضنة بيكتي </h3>
+	  </div>
+           </div>
+           <div class="item">
+          <div class="px-2 ">
+	  <img src="img/Flag_of_Europe.png" class="d-block w-100" alt="...">
+	  <h3 class="mt-3 text-center comp">الاتحاد الاوروبي</h3>
+	  </div>
+           </div>
+       </div>
+       <div class="MS-controls">
+           <button class="MS-left"><i class="fa fa-chevron-left"style="   color: #37798F4a;" aria-hidden="true"></i></button>
+           <button class="MS-right"><i class="fa fa-chevron-right" style="   color: #37798F4a;"  aria-hidden="true"></i></button>
+       </div>
+   </div>
+
+    <!-- Include jQuery -->
+    <script src="js/jquery-2.2.4.min.js"></script>
+
+    <!-- Include Multislider -->
+    <script src="js/multislider.min.js"></script>
+
+    <!-- Initialize element with Multislider -->
+    <script>
+    $('#exampleSlider').multislider({
+        interval: 4000,
+        slideAll: true,
+        duration: 1500
+    });
+	
+    </script>
+	
+	
+	</fieldset>
+	</section >	
+	<section class="container "  >
+	<fieldset class="borderfieldset  p-2  mt-2">
+	<legend  class="w-auto " style="text-align: center;">  اخر الاخبار     </legend>
+	<div class="col-sm-12">
+	<a class="seeMore leftSid"  href="#" role="button" aria-expanded="false"style="color:#37798F">
+	 <span>&#187;</span>
+	المزيد
+	</a>
+	</div>
+	<div class="row my-5" >
+	<div class="col-md-6 col-sm-12 mt-2 ">
+	<img class="rounded mx-auto d-block" src="img/news.png" style="   width: 100%;">
+	<div class="centered col-md-8 col-10 p-2">Centered</div>	</div>
+	<div class="col-md-6 col-sm-12 mt-2">
+	<img class="rounded mx-auto d-block" src="img/news.png" style="   width: 100%;">
+	<div class="centered col-md-8  col-10 p-2">Centered</div>
+	</div>
+	</div>
+	</fieldset>
+	
+	
+	</section>
+	
+	</main>
+	<footer>
+	<nav class="navbar navbar-dark footerBg p-0">
+		<div class="container"> 
+			<div class="col-md-4  footerCol " >
+			<img src="img/Group 577.png" style="   width: 100px;">
+			</div>
+			<div class="col-md-4 footerCol" style="font-size: small;">جميع الحقوق محفوظة لموقع فرمان 2019</div>
+			<div class="col-md-4 col ">
+				<ul class="pt-2 iconFooter" style="margin-bottom: 10px">
+					<a  href="#"class="iconNew"><i class="fab fa-whatsapp  " ></i></a>
+					<a href="#" class="iconNew"><i class="fab fa-instagram   " ></i></a>
+					<a href="#" class="iconNew"><i class="fab fa-linkedin-in   " ></i></a>
+					<a href="#" class="iconNew"><i class="fab fa-twitter  "  ></i></a>
+					<a href="#" class="iconNew"><i class="fab fa-facebook-f"></i></a>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</footer>
+	</body>
+</html>
